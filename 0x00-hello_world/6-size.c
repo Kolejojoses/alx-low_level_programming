@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints the size of various types of computers it is compiled and run on
- *
+ * main - prints the size of various types of computers 
+ * it is compiled and run on
  * Return: 0 (Success)
  */
 int main(void)
