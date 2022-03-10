@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - sizes
- * 
+ * main - sizes 
  * Return: 0 (Success)
  */
 int main(void)
