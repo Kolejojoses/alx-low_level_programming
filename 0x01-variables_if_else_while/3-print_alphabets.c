@@ -4,7 +4,7 @@
 /**
  * main - lowercase and uppercase alphabet
  *
- * Function: - 0 (Success)
+ * Return: - 0 (Success)
  */
 int main(void)
 {
