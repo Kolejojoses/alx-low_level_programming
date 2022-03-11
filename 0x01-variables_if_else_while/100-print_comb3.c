@@ -10,9 +10,9 @@ int main(void)
 {
 	int tens, unit;
 
-	for (unit = 1; unit <= 9; unit++)
+	for (tens = 0; tens <= 8; tens++)
 	{
-		for (tens = 0; tens <= 8; tens++)
+		for (unit = 1; unit <= 9; unit++)
 		{
 			if (tens < unit)
 			{
