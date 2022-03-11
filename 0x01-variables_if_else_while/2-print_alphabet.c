@@ -9,7 +9,7 @@
 int main(void)
 {
 	char lowerCase;
-	
+
 	lowerCase = 'a';
 
 	while (lowerCase <= 'z')
