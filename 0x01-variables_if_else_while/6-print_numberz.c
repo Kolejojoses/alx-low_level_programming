@@ -1,21 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 /**
  * main - prints numbers from 0 to 9
  *
- * Function: 0 (Success)
+ * Return: 0 (Success)
  */
 int main(void)
 {
-	int singleDigit;
+	int s;
 
-	singleDigit = 0;
-
-	while (singleDigit < 10)
+	for (s = 0; s < 10; s++)
 	{
-		putchar(singleDigit);
-		singleDigit++;
+		putchar(s % 10 + '0');
 	}
 	putchar('\n');
 	return (0);
