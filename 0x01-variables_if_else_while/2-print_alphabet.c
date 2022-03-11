@@ -8,9 +8,9 @@
 int main(void)
 {
 	char alphabet;
-	alphabet = "a";
-	while (alphabet <= "z")
-		putchar("%c", alphabet);
+	alphabet ="a";
+	while (alphabet<="z")
+		putchar("%c ", alphabet);
 		alphabet ++;
 	return (0);
 }
