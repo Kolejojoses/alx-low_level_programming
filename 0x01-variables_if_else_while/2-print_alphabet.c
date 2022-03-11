@@ -12,7 +12,7 @@ int main(void)
 	lowerCase='a';
 	while(lowerCase<='z')
 	{
-		putchar(lowerCase);
+		putchar(lowerCase\n);
 		lowerCase++;
 	}
 	return (0);
