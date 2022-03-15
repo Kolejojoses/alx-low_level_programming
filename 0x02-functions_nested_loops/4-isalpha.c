@@ -4,11 +4,11 @@
 
 /**
 *_isalpha - function that checks for alphabetic character
-*@c - notation
+*@c: notation
 *Return: 1 otherwise 0
 */
 
 int _isalpha(int c)
 {
-	return((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
