@@ -20,9 +20,10 @@ void times_table(void)
 			printf("%d", c);
 			if (a != 9)
 			{
+				_putchar(',');
 				_putchar(' ');
 			}
-			_putchar('\n');
+		_putchar('\n');
 		}
 	}
 }
