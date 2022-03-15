@@ -20,6 +20,5 @@ void print_alphabet(void);
 
 	for (alphabet = a; alphabet <= z; alphabet++)
 		_putchar(alphabet);
-		if (alphabet != z)
-			_putchar(' ');
+	_putchar(' ');
 }
