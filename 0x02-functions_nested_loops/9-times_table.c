@@ -19,7 +19,7 @@ void times_table(void)
 			c = a * b;
 			printf("%d", c);
 			_putchar('\n');
-			if (a != 9)
+			if (b < 9)
 			{
 				_putchar(',');
 				_putchar(' ');
