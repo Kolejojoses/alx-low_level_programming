@@ -17,22 +17,22 @@ void times_table(void)
 		for (b = 0; b < 10; b++)
 		{
 			c = a * b;
-			if (b == 0)
+			if (a != 0)
 			{
-				_putchar (a + '0');
+				_putchar(',');
+				_putchar(' ');
 			}
+			if (c >= 10)
+			{
+				_putchar((c / 10) + '0');
+				_putchar(c % 10 + '0');
 			else if (c < 10 && b != 0)
 			{
-				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
-				_putchar(a + '0');
+				_putchar(c % 10 + '0');
 			}
-			else if (c >= 10)
+			else
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar((c / 10) + '0');
 				_putchar(c % 10 + '0');
 			}
 		}
