@@ -10,24 +10,23 @@
 int main(void)
 {
 	int i;
-	unsigned long x, y, z;
+	unsigned long int j, k, next, sum;
 
-	x = 0;
-	y = 1;
+	j = 1;
+	k = 2;
+	sum = 0;
 
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i <= 33; ++i)
 	{
-		z = x + y;
-		x = y;
-		y = z;
-		if (i < 50)
+		if (j < 4000000 && (j % 2) == 0)
 		{
-			printf("%ld, ", z);
+			sum = sum + j;
 		}
-		else if (i == 50)
-		{
-			printf("%ld\n", z);
-		}
+		next = j + k;
+		j = k;
+		k = next;
 	}
+
+	printf("%lu\n", sum);
 	return (0);
 }
