@@ -9,25 +9,17 @@
 
 int main(void)
 {
-	int x; 
-	unsigned long int y, z, i;
+	int x, i;
 
-	y = 0;
-	z = 0;
 	i = 0;
 
-	for (x = 0; x < 1024; x++)
+	for (x = 1; x < 1024; x++)
 	{
-		if ((x % 5) == 0)
+		if ((x % 5 == 0) || (x % 3 == 0))
 		{
-			y = y + x;
-		}
-		if ((x % 3) == 0)
-		{
-			z = z + x;
+			i += x;
 		}
 	}
-	i = y + z;
-	printf("%ld\n", i);
+	printf("%d\n", i);
 	return (0);
 }
