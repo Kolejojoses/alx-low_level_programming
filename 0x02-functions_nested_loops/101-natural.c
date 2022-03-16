@@ -11,9 +11,13 @@ int main(void)
 {
 	int x, y, z, i;
 
+	y = 0;
+	z = 0;
+	i = 0;
+
 	for (x = 0; x < 1024; x++)
 	{
-		if ((x  % 5) == 0)
+		if ((x % 5) == 0)
 		{
 			y = y + x;
 		}
