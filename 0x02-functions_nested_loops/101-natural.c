@@ -9,7 +9,8 @@
 
 int main(void)
 {
-	int x, y, z, i;
+	int x; 
+	unsigned long int y, z, i;
 
 	y = 0;
 	z = 0;
@@ -27,6 +28,6 @@ int main(void)
 		}
 	}
 	i = y + z;
-	printf("%d\n", i);
+	printf("%ld\n", i);
 	return (0);
 }
