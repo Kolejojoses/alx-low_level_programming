@@ -22,7 +22,7 @@ int main(void)
 		y = z;
 		if (i < 50)
 		{
-			printf("%ld ", z);
+			printf("%ld, ", z);
 		}
 		else if (i == 50)
 		{
