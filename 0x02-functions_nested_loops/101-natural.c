@@ -9,18 +9,20 @@
 
 int main(void)
 {
-	int x;
+	int x, y, z, i;
 
 	for (x = 0; x < 1024; x++)
 	{
 		if ((x  % 5) == 0)
 		{
-			if ((x % 3) == 0)
-			{
-				x += x;
-				printf("%d\n", x);
-			}
+			y = y + x;
+		}
+		if ((x % 3) == 0)
+		{
+			z = z + x;
 		}
 	}
+	i = y + z;
+	printf("%d\n", i);
 	return (0);
 }
