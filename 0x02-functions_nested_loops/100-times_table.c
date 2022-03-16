@@ -22,7 +22,7 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 				}
-				if (z < 10)
+				if (z < 10 && z != 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
