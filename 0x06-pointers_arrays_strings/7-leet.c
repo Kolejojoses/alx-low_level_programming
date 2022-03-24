@@ -12,16 +12,17 @@ char *leet(char *s)
 {
 	int i, j;
 
-	char *a = "aAeEoOtTlL";
-	char *b = "4433007711";
+	char old[10] = "aAeEoOtTlL";
+
+	char new[10] = "4433007711";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (s[i] == a[j])
+			if (s[i] == old[j])
 			{
-				s[i] = b[j];
+				s[i] = new[j];
 			}
 		}
 	}
