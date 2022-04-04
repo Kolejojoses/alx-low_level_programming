@@ -4,6 +4,21 @@
 #include <stdlib.h>
 
 /**
+ *_strlen - length of string
+ *@s: string
+ *Return: length of string
+ */
+
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i + 1);
+}
+
+/**
  *argstostr - concatenates arguments
  *@ac: argument count
  *@av: arguments
@@ -21,8 +36,8 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
-		len += strlen(av[i]);
-	ptr = (char *)malloc((len + 2) * sizeof(char));
+		len += _strlen(av[i]);
+	ptr = (char *)malloc((len + 1) * sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
