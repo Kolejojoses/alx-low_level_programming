@@ -9,15 +9,15 @@
  *Return: nothing
  */
 
-void free_alloc_grid(int** ptr, int height)
+void free_alloc_grid(int **ptr, int height)
 {
 	int i;
 
 	for (i = 0; i < height; i++)
 	{
-		free (*(ptr + i));
+		free(*(ptr + i));
 	}
-	free (ptr);
+	free(ptr);
 }
 
 /**
@@ -45,5 +45,5 @@ int **alloc_grid(int width, int height)
 		*(ptr + i) = (int *)malloc(width * sizeof(int));
 	}
 	return (ptr);
-	free_alloc_grid (ptr, height);
+	free_alloc_grid(ptr, height);
 }
