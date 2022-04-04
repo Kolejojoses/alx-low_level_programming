@@ -3,24 +3,6 @@
 #include <stdlib.h>
 
 /**
- *free_alloc_grid - free alloc
- *@ptr: pointer
- *@height: height of grid
- *Return: nothing
- */
-
-void free_alloc_grid(int **ptr, int height)
-{
-	int i;
-
-	for (i = 0; i < height; i++)
-	{
-		free(*(ptr + i));
-	}
-	free(ptr);
-}
-
-/**
  *alloc_grid - 2-d array
  *@width: width of array
  *@height: height of array
@@ -29,7 +11,7 @@ void free_alloc_grid(int **ptr, int height)
 
 int **alloc_grid(int width, int height)
 {
-	int **ptr, i;
+	int **ptr, i, j;
 
 	if (width <= 0 || height <= 0)
 	{
@@ -43,7 +25,22 @@ int **alloc_grid(int width, int height)
 	for (i = 0; i < height; i++)
 	{
 		*(ptr + i) = (int *)malloc(width * sizeof(int));
+		if (*(ptr + i) == NULL)
+		{
+			free(ptr);
+			for (j = 0; j <= i; j++)
+			{
+				free(*(ptr + j));
+			}
+			return (NULL);
+		}
+	}
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			ptr[i][j] = 0;
+		}
 	}
 	return (ptr);
-	free_alloc_grid(ptr, height);
 }
