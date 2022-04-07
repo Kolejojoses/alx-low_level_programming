@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - prints
@@ -11,7 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int num1, num2, mul, *ptr, len1, len2, len;
+	int *num1, *num2, *ptr, len1, len2, len;
+	char *s1, *s2;
 
 	if (argc < 3 || argc > 3)
 	{
@@ -20,7 +22,7 @@ int main(int argc, char *argv[])
 	}
 
 	s1 = argv[1];
-	s2 = argv[s2];
+	s2 = argv[2];
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 	len = len1 + len2;
@@ -29,7 +31,7 @@ int main(int argc, char *argv[])
 	num2 = atoi(s2);
 	ptr = num1 * num2;
 
-	printf("%d\n", ptr);
+	printf("%d\n", *ptr);
 	free(ptr);
 	return (0);
 }
