@@ -20,9 +20,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	else
 	{
 		ptr = (char *)malloc(nmemb * size);
-		bzero(ptr, nmemb * size);
 	}
 	if (ptr == NULL)
 		return (NULL);
+	bzero(ptr, nmemb * size);
 	return (ptr);
 }
