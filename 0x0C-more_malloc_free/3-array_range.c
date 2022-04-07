@@ -9,3 +9,12 @@
  */
 
 int *array_range(int min, int max)
+{
+	int *ptr;
+
+	if (min > max)
+		return (NULL);
+
+	if (ptr == NULL)
+		return (NULL);
+}
