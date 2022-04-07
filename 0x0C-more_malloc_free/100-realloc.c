@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
+#include <string.h>
+#include <assert.h>
 
 /**
  * _realloc - reallocate
@@ -26,7 +28,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
    	else
       	{
-		assert((ptr) && (ne_size > old_size));
+		assert((ptr) && (new_size > old_size));
 		void *ptrNew = malloc(new_size);
 		if (ptrNew)
 		{
