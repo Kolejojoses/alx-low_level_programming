@@ -22,7 +22,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	i = strlen(name);
 	j = strlen(owner);
 	copy->name = malloc(sizeof(char) * (i + 1));
+	if (copy->name == NULL)
+		return (NULL);
 	copy->owner = malloc(sizeof(char) * (j + 1));
+	if (copy->owner == NULL)
+		return (NULL);
 	strcpy(copy->name, name);
 	strcpy(copy->owner, owner);
 	copy->age = age;
