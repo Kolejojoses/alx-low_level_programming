@@ -4,8 +4,7 @@
 
 /**
  * print_all - function that prints all
- * @separator: separates the numbers
- * @n: first integer
+ * @format: types of argument
  *
  * Return: nothing
  */
@@ -15,6 +14,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	unsigned int i = 0;
 	char *ptr;
+	char *sep = "";
 
 	va_start(args, format);
 	if (format)
@@ -24,26 +24,28 @@ void print_all(const char * const format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					printf("%c", va_arg(args, char));
+					printf("%s%c", sep, va_arg(args, int));
 					break;
 				case 'i':
-					printf("%d", va_arg(args, int));
+					printf("%s%d", sep, va_arg(args, int));
 					break;
 				case 'f':
-					printf("%f", va_arg(args, float));
+					printf("%s%f", sep, va_arg(args, double));
 					break;
 				case 's':
 					ptr = va_arg(args, char *);
-					if (str == NULL)
+					if (ptr == NULL)
 						ptr = "(nil)";
-					printf("%s", ptr);
+					printf("%s%s", sep, ptr);
 					break;
 				default:
 					i++;
 					continue;
 			}
+			sep = ", ";
 			i++;
 		}
+	}
 	printf("\n");
 	va_end(args);
 }
